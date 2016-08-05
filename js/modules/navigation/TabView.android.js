@@ -6,9 +6,9 @@
 
 import React, { PropTypes } from 'react';
 import {
-   StyleSheet,
-   Text,
-   View
+  StyleSheet,
+  Text,
+  View
 } from 'react-native';
 
 const TabView = React.createClass({

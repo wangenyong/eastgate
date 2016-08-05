@@ -7,13 +7,14 @@
 import React, { PropTypes } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {
-   StyleSheet,
-   Text,
-   View,
-   TabBarIOS
+  StyleSheet,
+  Text,
+  View,
+  TabBarIOS
 } from 'react-native';
 import HelloView from '../../components/HelloView';
 import type { Tab } from './NavigationState';
+import Colors from '../../utils/colorUtil';
 
 const TabView = React.createClass({
   propTypes: {
@@ -30,7 +31,7 @@ const TabView = React.createClass({
 
   render: function() {
     return (
-      <TabBarIOS tintColor={'#FF3366'} >
+      <TabBarIOS tintColor={Colors.primaryColor} >
         <Icon.TabBarItem
           title="Home"
           iconName="ios-home-outline"
