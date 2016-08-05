@@ -5,11 +5,14 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {
    StyleSheet,
    Text,
-   View
+   View,
+   TabBarIOS
 } from 'react-native';
+import HelloView from '../../components/HelloView';
 
 const TabView = React.createClass({
   propTypes: {
