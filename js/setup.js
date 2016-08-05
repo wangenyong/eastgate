@@ -16,6 +16,7 @@ import * as snapshotUtil from './utils/snapshot';
 import * as SessionStateActions from './modules/session/SessionState';
 import store from './redux/store';
 import NavigationViewContainer from './modules/navigation/NavigationViewContainer';
+import SignInView from './modules/auth/SignInView';
 
 const Setup = React.createClass({
   PropTypes: {
@@ -49,6 +50,9 @@ const Setup = React.createClass({
         <View style={styles.container}><ActivityIndicator /></View>
       )
     }
+    if (this.props.isReady && !this.props.isLoggedIn) {
+      return <SignInView />
+    }
     return (
       <View style={{flex: 1}}>
         <Text>Setup</Text>
@@ -67,7 +71,8 @@ var styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
-    isReady: state.getIn(['session', 'isReady'])
+    isReady: state.getIn(['session', 'isReady']),
+    isLoggedIn: state.getIn(['auth', 'isLoggedIn'])
   };
 }
 
