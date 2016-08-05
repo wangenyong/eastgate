@@ -1,11 +1,15 @@
 import {Map} from 'immutable';
 import {combineReducers} from 'redux-loop';
 import AuthStateReducer from '../modules/auth/AuthState';
+import NavigationStateReducer from '../modules/navigation/NavigationState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 
 const reducers = {
   // Authentication/login state
   auth: AuthStateReducer,
+
+  // navigationState
+  navigationState: NavigationStateReducer,
 
   session: SessionStateReducer
 

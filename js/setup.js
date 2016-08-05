@@ -25,6 +25,9 @@ const Setup = React.createClass({
   },
 
   componentDidMount: function() {
+    /**
+     * 根据本地是否存在store的副本，选择初始化store或导入本地store
+     */
     snapshotUtil.resetSnapshot()
       .then(snapshot => {
         const {dispatch} = this.props;
