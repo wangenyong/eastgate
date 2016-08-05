@@ -6,7 +6,7 @@ import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState'
 const reducers = {
   // Authentication/login state
   auth: AuthStateReducer,
-  
+
   session: SessionStateReducer
 
 };
