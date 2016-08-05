@@ -15,7 +15,7 @@ import {
 import * as snapshotUtil from './utils/snapshot';
 import * as SessionStateActions from './modules/session/SessionState';
 import store from './redux/store';
-import NavigationViewContainer from './modules/navigation/NavigationViewContainer';
+import NavigationView from './modules/navigation/NavigationView';
 import SignInViewContainer from './modules/auth/SignInViewContainer';
 
 const Setup = React.createClass({
@@ -57,9 +57,7 @@ const Setup = React.createClass({
       return <SignInViewContainer />
     }
     return (
-      <View style={{flex: 1}}>
-        <Text>Setup</Text>
-      </View>
+      <NavigationView />
     )
   }
 })
