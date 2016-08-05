@@ -13,16 +13,70 @@ import {
    TabBarIOS
 } from 'react-native';
 import HelloView from '../../components/HelloView';
+import type { Tab } from './NavigationState';
 
 const TabView = React.createClass({
   propTypes: {
-    navigationState: PropTypes.object.isRequired,
+    tab: PropTypes.string.isRequired,
     switchTab: PropTypes.func.isRequired,
     navigator: PropTypes.object.isRequired
   },
+
+  onTabSelect(tab: Tab) {
+    if (this.props.tab !== tab) {
+      this.props.switchTab(tab);
+    }
+  },
+
   render: function() {
     return (
-      <View style={styles.container}><Text>Hello TabView:)</Text></View>
+      <TabBarIOS tintColor={'#FF3366'} >
+        <Icon.TabBarItem
+          title="Home"
+          iconName="ios-home-outline"
+          selectedIconName="ios-home"
+          selected={this.props.tab === 'home'}
+          onPress={this.onTabSelect.bind(this, 'home')}
+          >
+          <HelloView />
+        </Icon.TabBarItem>
+        <Icon.TabBarItem
+          title="List"
+          iconName="ios-list-outline"
+          selectedIconName="ios-list"
+          selected={this.props.tab === 'list'}
+          onPress={this.onTabSelect.bind(this, 'list')}
+          >
+          <HelloView />
+        </Icon.TabBarItem>
+        <Icon.TabBarItem
+          title="Map"
+          iconName="ios-map-outline"
+          selectedIconName="ios-map"
+          selected={this.props.tab === 'map'}
+          onPress={this.onTabSelect.bind(this, 'map')}
+          >
+          <HelloView />
+        </Icon.TabBarItem>
+        <Icon.TabBarItem
+          title="Profile"
+          iconName="ios-person-outline"
+          selectedIconName="ios-person"
+          selected={this.props.tab === 'profile'}
+          onPress={this.onTabSelect.bind(this, 'profile')}
+          >
+          <HelloView />
+        </Icon.TabBarItem>
+        <Icon.TabBarItem
+          title="More"
+          iconName="ios-more-outline"
+          selectedIconName="ios-more"
+          selected={this.props.tab === 'more'}
+          onPress={this.onTabSelect.bind(this, 'more')}
+          >
+          <HelloView />
+        </Icon.TabBarItem>
+      </TabBarIOS>
     )
   }
 })

@@ -13,7 +13,7 @@ import {
 
 const TabView = React.createClass({
   propTypes: {
-    navigationState: PropTypes.object.isRequired,
+    tab: PropTypes.string.isRequired,
     switchTab: PropTypes.func.isRequired,
     navigator: PropTypes.object.isRequired
   },

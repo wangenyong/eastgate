@@ -9,7 +9,7 @@ const reducers = {
   auth: AuthStateReducer,
 
   // navigationState
-  navigationState: NavigationStateReducer,
+  navigation: NavigationStateReducer,
 
   session: SessionStateReducer
 
