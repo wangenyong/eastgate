@@ -11,6 +11,7 @@ const initialState = Map({
 // Actions
 const USER_LOGIN_SUCCESS = 'AppState/USER_LOGIN_SUCCESS';
 const USER_LOGIN_ERROR = 'AppState/USER_LOGIN_ERROR';
+const USER_LOGIN_SKIP = 'AppState/USER_LOGIN_SKIP';
 
 export function onUserLoginSuccess(profile, token) {
   return {
@@ -29,6 +30,12 @@ export function onUserLoginError(error) {
   };
 }
 
+export function onUserLoginSkip() {
+  return {
+    type: USER_LOGIN_SKIP
+  };
+}
+
 // Reducer
 export default function AuthStateReducer(state = initialState, action = {}) {
   switch (action.type) {
@@ -38,6 +45,9 @@ export default function AuthStateReducer(state = initialState, action = {}) {
         .set('currentUser', action.payload.profile)
     case USER_LOGIN_ERROR:
       return initialState;
+    case USER_LOGIN_SKIP:
+      return state
+        .set('isLoggedIn', true)
     default:
       return state;
   }

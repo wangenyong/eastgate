@@ -16,7 +16,7 @@ import * as snapshotUtil from './utils/snapshot';
 import * as SessionStateActions from './modules/session/SessionState';
 import store from './redux/store';
 import NavigationViewContainer from './modules/navigation/NavigationViewContainer';
-import SignInView from './modules/auth/SignInView';
+import SignInViewContainer from './modules/auth/SignInViewContainer';
 
 const Setup = React.createClass({
   PropTypes: {
@@ -51,7 +51,7 @@ const Setup = React.createClass({
       )
     }
     if (this.props.isReady && !this.props.isLoggedIn) {
-      return <SignInView />
+      return <SignInViewContainer />
     }
     return (
       <View style={{flex: 1}}>
