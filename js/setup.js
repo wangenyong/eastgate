@@ -51,7 +51,7 @@ const Setup = React.createClass({
     }
     return (
       <View style={{flex: 1}}>
-        <NavigationViewContainer />
+        <Text>Setup</Text>
       </View>
     )
   }
