@@ -4,7 +4,7 @@ export type Tab =
     'home'
   | 'list'
   | 'profile'
-  | 'map'
+  | 'grid'
   | 'more';
 
 const initialState = Map({

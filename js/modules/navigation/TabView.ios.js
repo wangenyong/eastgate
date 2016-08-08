@@ -51,11 +51,11 @@ const TabView = React.createClass({
           <HelloView />
         </Icon.TabBarItem>
         <Icon.TabBarItem
-          title="Map"
-          iconName="ios-map-outline"
-          selectedIconName="ios-map"
-          selected={this.props.tab === 'map'}
-          onPress={this.onTabSelect.bind(this, 'map')}
+          title="Grid"
+          iconName="ios-grid-outline"
+          selectedIconName="ios-grid"
+          selected={this.props.tab === 'grid'}
+          onPress={this.onTabSelect.bind(this, 'grid')}
           >
           <HelloView />
         </Icon.TabBarItem>
