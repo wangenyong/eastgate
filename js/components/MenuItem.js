@@ -24,7 +24,7 @@ const MenuItem = React.createClass({
     icon: PropTypes.string.isRequired,
     selected: PropTypes.bool.isRequired,
     title: PropTypes.string.isRequired,
-    badge: PropTypes.bool.isRequired,
+    badge: PropTypes.bool,
     onPress: PropTypes.func.isRequired
   },
 
