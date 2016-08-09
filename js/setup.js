@@ -10,7 +10,8 @@ import {
   View,
   StyleSheet,
   Text,
-  ActivityIndicator
+  ActivityIndicator,
+  StatusBar
 } from 'react-native';
 import * as snapshotUtil from './utils/snapshot';
 import * as SessionStateActions from './modules/session/SessionState';
@@ -50,20 +51,30 @@ const Setup = React.createClass({
   render: function() {
     if (!this.props.isReady) {
       return (
-        <View style={styles.container}><ActivityIndicator /></View>
+        <View style={styles.center}><ActivityIndicator /></View>
       )
     }
     if (this.props.isReady && !this.props.isLoggedIn) {
       return <SignInViewContainer />
     }
     return (
-      <NavigationView />
+      <View style={styles.container}>
+        <StatusBar
+          translucent={true}
+          backgroundColor="rgba(0, 0, 0, 0.2)"
+          barStyle="light-content"
+         />
+        <NavigationView />
+      </View>
     )
   }
 })
 
 var styles = StyleSheet.create({
   container: {
+    flex: 1
+  },
+  center: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center"

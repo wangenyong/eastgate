@@ -10,21 +10,33 @@ import {
    Text,
    View
 } from 'react-native';
+import Colors from '../utils/colorUtil';
+import Header from './Header';
 
 const HelloView = React.createClass({
 
   render: function() {
     return (
-      <View style={styles.container}><Text>Hello:)</Text></View>
+      <View style={styles.container}>
+        <Header 
+          title={'Message'}
+          style={{backgroundColor: Colors.primaryColor}} />
+        <View style={styles.center} > 
+          <Text>Hello:)</Text>
+        </View>
+      </View>
     )
   }
 })
 
 var styles = StyleSheet.create({
   container: {
+    flex: 1
+  },
+  center: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
 
