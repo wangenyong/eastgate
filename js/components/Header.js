@@ -14,6 +14,7 @@ import {
   Text,
   StyleSheet
 } from 'react-native';
+import Colors from '../utils/colorUtil';
 
 export type Layout =
     'default'      // Use platform defaults (icon on Android, text on iOS)
@@ -60,7 +61,7 @@ class HeaderAndroid extends Component {
       })));
     }
 
-    const textColor = this.props.foreground === 'dark' ? CYColors.darkText : 'white';
+    const textColor = this.props.foreground === 'dark' ? Colors.darkText : 'white';
 
     let content;
     if (React.Children.count(this.props.children) > 0) {
@@ -103,8 +104,8 @@ class HeaderIOS extends Component {
 
   render() {
     const {leftItem, title, rightItem, foreground} = this.props;
-    const titleColor = foreground === 'dark' ? CYColors.darkText : 'white';
-    const itemsColor = foreground === 'dark' ? CYColors.lightText : 'white';
+    const titleColor = foreground === 'dark' ? Colors.darkText : 'white';
+    const itemsColor = foreground === 'dark' ? Colors.lightText : 'white';
 
     const content = React.Children.count(this.props.children) === 0
       ? <Text style={[styles.titleText, {color: titleColor}]}>
