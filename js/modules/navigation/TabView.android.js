@@ -27,6 +27,7 @@ const TabView = React.createClass({
     if (this.props.tab !== tab) {
       this.props.switchTab(tab);
     }
+    this.refs.drawer.closeDrawer();
   },
 
   renderNavigationView() {
@@ -52,7 +53,7 @@ const TabView = React.createClass({
           title="Grid"
           selected={this.props.tab === 'grid'}
           onPress={this.onTabSelect.bind(this, 'grid')}
-          icon='md-map'
+          icon='md-grid'
         />
         <MenuItem
           title="Profile"
