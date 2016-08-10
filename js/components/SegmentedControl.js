@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import StyleSheet from '../utils/styleUtil';
+import * as StyleSheet from '../utils/styleUtil';
 
 class SegmentedControl extends React.Component {
   props: {
