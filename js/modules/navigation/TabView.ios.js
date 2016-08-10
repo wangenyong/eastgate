@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import HelloView from '../../components/HelloView';
 import HomeView from '../home/HomeView';
+import ProfileView from '../profile/ProfileView';
 import type { Tab } from './NavigationState';
 import Colors from '../../utils/colorUtil';
 
@@ -67,7 +68,7 @@ const TabView = React.createClass({
           selected={this.props.tab === 'profile'}
           onPress={this.onTabSelect.bind(this, 'profile')}
           >
-          <HelloView />
+          <ProfileView />
         </Icon.TabBarItem>
         <Icon.TabBarItem
           title="More"

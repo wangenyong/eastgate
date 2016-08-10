@@ -9,27 +9,19 @@ import React, { Component, PropTypes } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
-  TouchableOpacity
+  StyleSheet
 } from 'react-native';
 import ViewContainer from '../../components/ViewContainer';
 import Colors from '../../utils/colorUtil';
 
-const HomeView = React.createClass({
+const ProfileView = React.createClass({
   render: function() {
     return (
       <ViewContainer
-        title="Home"
-        backgroundColor={Colors.primaryColor}
-        selectedSectionColor={'white'} >
-        <View title="Day 1" style={styles.center} >
-          <Text>Day 1</Text>
-        </View>
-        <View title="Day 2" style={styles.center} >
-          <Text>Day 1</Text>
-        </View>
-        <View title="Day 3" style={styles.center} >
-          <Text>Day 1</Text>
+        title="Profile"
+        backgroundColor={Colors.primaryColor} >
+        <View style={styles.center} >
+          <Text>Profile</Text>
         </View>
       </ViewContainer>
     )
@@ -44,4 +36,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default HomeView
+export default ProfileView

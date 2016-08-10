@@ -15,6 +15,7 @@ import {
 import DrawerLayout from '../../components/DrawerLayout';
 import HelloView from '../../components/HelloView';
 import HomeView from '../home/HomeView';
+import ProfileView from '../profile/ProfileView';
 import MenuItem from '../../components/MenuItem';
 
 const TabView = React.createClass({
@@ -98,7 +99,7 @@ const TabView = React.createClass({
         );
       case 'profile':
         return (
-          <HelloView />
+          <ProfileView />
         );
       case 'more':
       return (
