@@ -24,14 +24,24 @@ const TabView = React.createClass({
     navigator: PropTypes.object.isRequired
   },
 
-  onTabSelect(tab: Tab) {
+  getChildContext: function() {
+    return {
+      openDrawer: this.openDrawer
+    };
+  },
+
+  openDrawer: function() {
+    this.refs.drawer.openDrawer();
+  },
+
+  onTabSelect: function(tab: Tab) {
     if (this.props.tab !== tab) {
       this.props.switchTab(tab);
     }
     this.refs.drawer.closeDrawer();
   },
 
-  renderNavigationView() {
+  renderNavigationView: function() {
     return (
       <View style={styles.drawer}>
         <Image
@@ -72,7 +82,7 @@ const TabView = React.createClass({
     )
   },
 
-  renderContent() {
+  renderContent: function() {
     switch (this.props.tab) {
       case 'home':
         return (
@@ -112,6 +122,10 @@ const TabView = React.createClass({
     )
   }
 })
+
+TabView.childContextTypes = {
+  openDrawer: React.PropTypes.func
+};
 
 const styles = StyleSheet.create({
   drawer: {
