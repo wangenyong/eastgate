@@ -1,8 +1,8 @@
 module.exports = {
-  darkPrimaryColor: '#00796b',
-  primaryColor: '#009688',
-  lightPrimaryColor: '#b2dfdb',
-  accentColor: '#cddc39',
+  darkPrimaryColor: '#d32f2f',
+  primaryColor: '#f44336',
+  lightPrimaryColor: '#ffcdd2',
+  accentColor: '#00bcd4',
   textIcon: '#ffffff',
   textPrimary: '#212121',
   textSecondary: '#757575',
