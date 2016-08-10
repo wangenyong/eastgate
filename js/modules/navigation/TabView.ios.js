@@ -13,6 +13,7 @@ import {
   TabBarIOS
 } from 'react-native';
 import HelloView from '../../components/HelloView';
+import HomeView from '../home/HomeView';
 import type { Tab } from './NavigationState';
 import Colors from '../../utils/colorUtil';
 
@@ -39,7 +40,7 @@ const TabView = React.createClass({
           selected={this.props.tab === 'home'}
           onPress={this.onTabSelect.bind(this, 'home')}
           >
-          <HelloView />
+          <HomeView />
         </Icon.TabBarItem>
         <Icon.TabBarItem
           title="List"

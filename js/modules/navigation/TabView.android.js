@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import DrawerLayout from '../../components/DrawerLayout';
 import HelloView from '../../components/HelloView';
+import HomeView from '../home/HomeView';
 import MenuItem from '../../components/MenuItem';
 
 const TabView = React.createClass({
@@ -75,7 +76,7 @@ const TabView = React.createClass({
     switch (this.props.tab) {
       case 'home':
         return (
-          <HelloView />
+          <HomeView />
         );
       case 'list':
         return (
