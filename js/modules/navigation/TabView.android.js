@@ -17,6 +17,7 @@ import HelloView from '../../components/HelloView';
 import HomeView from '../home/HomeView';
 import ProfileView from '../profile/ProfileView';
 import GridViewContainer from '../grid/GridViewContainer';
+import MovieListViewContainer from '../list/MovieListViewContainer';
 import MenuItem from '../../components/MenuItem';
 
 const TabView = React.createClass({
@@ -92,7 +93,7 @@ const TabView = React.createClass({
         );
       case 'list':
         return (
-          <HelloView />
+          <MovieListViewContainer />
         );
       case 'grid':
         return (
