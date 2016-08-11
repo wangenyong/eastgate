@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import ViewContainer from '../../components/ViewContainer';
 import Colors from '../../utils/colorUtil';
-import Dimensions from '../../utils/DimensionUtil';
+import Dimensions from '../../utils/dimensionUtil';
 
 const column = 4;
 
