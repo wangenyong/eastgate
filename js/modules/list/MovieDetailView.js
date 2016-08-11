@@ -48,7 +48,8 @@ const MovieDetailView = React.createClass({
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#eee'
   },
   center: {
     flex: 1,
