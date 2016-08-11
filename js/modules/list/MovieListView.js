@@ -19,12 +19,20 @@ import Colors from '../../utils/colorUtil';
 
 const MovieListView = React.createClass({
   propTypes: {
-    dataSource: PropTypes.object.isRequired
+    dataSource: PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired
   },  
 
-  _renderItem(item: any) {
+  _onPress: function(title: string) {
+    this.props.navigator.push({
+      name: 'MovieDetail',
+      title
+    })
+  },
+
+  _renderItem: function(item: any) {
     return (
-      <TouchableOpacity >
+      <TouchableOpacity onPress={this._onPress.bind(this, item.title)} >
         <View style={styles.row}>
           <Image source={{uri: item.img}} style={{width: 120, height: 80}} />
           <Text numberOfLines={4} style={styles.description}>{item.description}</Text>

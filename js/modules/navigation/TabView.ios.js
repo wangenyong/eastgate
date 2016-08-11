@@ -52,7 +52,7 @@ const TabView = React.createClass({
           selected={this.props.tab === 'list'}
           onPress={this.onTabSelect.bind(this, 'list')}
           >
-          <MovieListViewContainer />
+          <MovieListViewContainer navigator={this.props.navigator} />
         </Icon.TabBarItem>
         <Icon.TabBarItem
           title="Grid"

@@ -93,7 +93,7 @@ const TabView = React.createClass({
         );
       case 'list':
         return (
-          <MovieListViewContainer />
+          <MovieListViewContainer navigator={this.props.navigator} />
         );
       case 'grid':
         return (

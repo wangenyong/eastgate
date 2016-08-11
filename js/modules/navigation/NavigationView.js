@@ -12,6 +12,7 @@ import {
   Platform
 } from 'react-native';
 import TabViewContainer from './TabViewContainer';
+import MovieDetailView from '../list/MovieDetailView';
 
 const NavigationView = React.createClass({
 
@@ -32,6 +33,11 @@ const NavigationView = React.createClass({
   },
 
   renderScene: function(route: any, navigator: Navigator) {
+    if (route.name == 'MovieDetail') {
+      return (
+        <MovieDetailView title={route.title} navigator={navigator} />
+      )
+    }
     return <TabViewContainer navigator={navigator} />
   }
 });
