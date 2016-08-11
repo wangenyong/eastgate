@@ -3,6 +3,7 @@ import {combineReducers} from 'redux-loop';
 import AuthStateReducer from '../modules/auth/AuthState';
 import NavigationStateReducer from '../modules/navigation/NavigationState';
 import GridStateReducer from '../modules/grid/GridState';
+import ListStateReducer from '../modules/list/ListState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 
 const reducers = {
@@ -14,7 +15,9 @@ const reducers = {
 
   session: SessionStateReducer,
 
-  grid: GridStateReducer
+  grid: GridStateReducer,
+
+  list: ListStateReducer
 
 };
 
