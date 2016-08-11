@@ -49,6 +49,38 @@ const initialState = Map({
       icon: "logo-skype",
       size: 30,
       color: "#ff4081"
+    },
+    {
+      key: 6,
+      title: "chrome",
+      isFA: false,
+      icon: "logo-chrome",
+      size: 30,
+      color: "green"
+    },
+    {
+      key: 7,
+      title: "github",
+      isFA: false,
+      icon: "logo-github",
+      size: 30,
+      color: "black"
+    },
+    {
+      key: 8,
+      title: "google",
+      isFA: false,
+      icon: "logo-google",
+      size: 30,
+      color: "#ff5722"
+    },
+    {
+      key: 9,
+      title: "xbox",
+      isFA: false,
+      icon: "logo-xbox",
+      size: 30,
+      color: "#607d8b"
     }
   ]
 })
