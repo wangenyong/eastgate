@@ -15,6 +15,7 @@ import {
 import HelloView from '../../components/HelloView';
 import HomeView from '../home/HomeView';
 import ProfileView from '../profile/ProfileView';
+import GridViewContainer from '../grid/GridViewContainer';
 import type { Tab } from './NavigationState';
 import Colors from '../../utils/colorUtil';
 
@@ -59,7 +60,7 @@ const TabView = React.createClass({
           selected={this.props.tab === 'grid'}
           onPress={this.onTabSelect.bind(this, 'grid')}
           >
-          <HelloView />
+          <GridViewContainer />
         </Icon.TabBarItem>
         <Icon.TabBarItem
           title="Profile"

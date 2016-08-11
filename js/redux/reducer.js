@@ -2,6 +2,7 @@ import {Map} from 'immutable';
 import {combineReducers} from 'redux-loop';
 import AuthStateReducer from '../modules/auth/AuthState';
 import NavigationStateReducer from '../modules/navigation/NavigationState';
+import GridStateReducer from '../modules/grid/GridState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 
 const reducers = {
@@ -11,7 +12,9 @@ const reducers = {
   // navigationState
   navigation: NavigationStateReducer,
 
-  session: SessionStateReducer
+  session: SessionStateReducer,
+
+  grid: GridStateReducer
 
 };
 

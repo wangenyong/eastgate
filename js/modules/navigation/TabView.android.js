@@ -16,6 +16,7 @@ import DrawerLayout from '../../components/DrawerLayout';
 import HelloView from '../../components/HelloView';
 import HomeView from '../home/HomeView';
 import ProfileView from '../profile/ProfileView';
+import GridViewContainer from '../grid/GridViewContainer';
 import MenuItem from '../../components/MenuItem';
 
 const TabView = React.createClass({
@@ -95,7 +96,7 @@ const TabView = React.createClass({
         );
       case 'grid':
         return (
-          <HelloView />
+          <GridViewContainer />
         );
       case 'profile':
         return (

@@ -1,13 +1,13 @@
 import {Map} from 'immutable';
 
 const initialState = Map({
-items: [
+  items: [
     {
       key: 0,
       title: "apple",
       isFA: false,
       icon: "logo-apple",
-      size: 54,
+      size: 34,
       color: "#ff856c"
     },
     {
@@ -15,7 +15,7 @@ items: [
       title: "facebook",
       isFA: false,
       icon: "logo-facebook",
-      size: 50,
+      size: 30,
       color: "#90bdc1"
     },
     {
@@ -23,7 +23,7 @@ items: [
       title: "twitter",
       isFA: false,
       icon: "logo-twitter",
-      size: 45,
+      size: 25,
       color: "#2aa2ef"
     },
     {
@@ -31,7 +31,7 @@ items: [
       title: "whatsapp",
       isFA: false,
       icon: "logo-whatsapp",
-      size: 45,
+      size: 25,
       color: "#cddc39"
     },
     {
@@ -39,7 +39,7 @@ items: [
       title: "snapchat",
       isFA: false,
       icon: "logo-snapchat",
-      size: 50,
+      size: 30,
       color: "#ffc107"
     },
     {
@@ -47,7 +47,7 @@ items: [
       title: "skype",
       isFA: false,
       icon: "logo-skype",
-      size: 50,
+      size: 30,
       color: "#ff4081"
     }
   ]
