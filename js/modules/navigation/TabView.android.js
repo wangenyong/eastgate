@@ -15,6 +15,7 @@ import {
 import DrawerLayout from '../../components/DrawerLayout';
 import HelloView from '../../components/HelloView';
 import HomeView from '../home/HomeView';
+import MoreView from '../more/MoreView';
 import ProfileView from '../profile/ProfileView';
 import GridViewContainer from '../grid/GridViewContainer';
 import MovieListViewContainer from '../list/MovieListViewContainer';
@@ -105,7 +106,7 @@ const TabView = React.createClass({
         );
       case 'more':
       return (
-        <HelloView />
+        <MoreView />
       );
     }
     throw new Error(`Unknown tab ${this.props.tab}`);

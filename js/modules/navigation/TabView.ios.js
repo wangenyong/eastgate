@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import HelloView from '../../components/HelloView';
 import HomeView from '../home/HomeView';
+import MoreView from '../more/MoreView';
 import ProfileView from '../profile/ProfileView';
 import GridViewContainer from '../grid/GridViewContainer';
 import MovieListViewContainer from '../list/MovieListViewContainer';
@@ -79,7 +80,7 @@ const TabView = React.createClass({
           selected={this.props.tab === 'more'}
           onPress={this.onTabSelect.bind(this, 'more')}
           >
-          <HelloView />
+          <MoreView />
         </Icon.TabBarItem>
       </TabBarIOS>
     )
