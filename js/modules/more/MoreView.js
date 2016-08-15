@@ -12,13 +12,20 @@ import {
 } from 'react-native';
 import Colors from '../../utils/colorUtil';
 import ViewContainer from '../../components/ViewContainer';
+import SettingIcon from '../../components/SettingIcon';
 
 const MessageView = React.createClass({
 
   render: function() {
+    var rightItem = {
+      title: '设置',
+      icon: SettingIcon,
+      layout: 'icon'
+    }
     return (
       <ViewContainer
         title="More"
+        rightItem={rightItem}
         backgroundColor={Colors.primaryColor} >
         <View style={styles.center} > 
           <Text>More</Text>
