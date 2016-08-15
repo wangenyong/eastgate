@@ -15,12 +15,22 @@ import ViewContainer from '../../components/ViewContainer';
 import SettingIcon from '../../components/SettingIcon';
 
 const MessageView = React.createClass({
+  propTypes: {
+    navigator: PropTypes.object.isRequired
+  },  
+
+  jumpToSetting: function() {
+    this.props.navigator.push({
+      name: 'Setting'
+    })
+  },
 
   render: function() {
     var rightItem = {
       title: '设置',
       icon: SettingIcon,
-      layout: 'icon'
+      layout: 'icon',
+      onPress: this.jumpToSetting
     }
     return (
       <ViewContainer

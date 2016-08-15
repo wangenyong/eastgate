@@ -80,7 +80,7 @@ const TabView = React.createClass({
           selected={this.props.tab === 'more'}
           onPress={this.onTabSelect.bind(this, 'more')}
           >
-          <MoreView />
+          <MoreView navigator={this.props.navigator} />
         </Icon.TabBarItem>
       </TabBarIOS>
     )

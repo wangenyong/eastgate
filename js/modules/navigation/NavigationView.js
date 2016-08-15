@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import TabViewContainer from './TabViewContainer';
 import MovieDetailView from '../list/MovieDetailView';
+import SettingView from '../setting/SettingView';
 
 const NavigationView = React.createClass({
 
@@ -22,7 +23,7 @@ const NavigationView = React.createClass({
         ref="navigator"
         style={styles.container}
         configureScene={(route) => {
-          if (Platform.OS === 'android') {
+          if (Platform.OS === 'android' || route.name == 'Setting') {
             return Navigator.SceneConfigs.FloatFromBottomAndroid;
           }
           return Navigator.SceneConfigs.PushFromRight;
@@ -36,6 +37,11 @@ const NavigationView = React.createClass({
     if (route.name == 'MovieDetail') {
       return (
         <MovieDetailView title={route.title} navigator={navigator} />
+      )
+    }
+    if (route.name == 'Setting') {
+      return (
+        <SettingView navigator={navigator} />
       )
     }
     return <TabViewContainer navigator={navigator} />

@@ -106,7 +106,7 @@ const TabView = React.createClass({
         );
       case 'more':
       return (
-        <MoreView />
+        <MoreView navigator={this.props.navigator} />
       );
     }
     throw new Error(`Unknown tab ${this.props.tab}`);
