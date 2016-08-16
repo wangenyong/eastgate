@@ -20,6 +20,7 @@ import ProfileView from '../profile/ProfileView';
 import GridViewContainer from '../grid/GridViewContainer';
 import MovieListViewContainer from '../list/MovieListViewContainer';
 import MenuItem from '../../components/MenuItem';
+import Colors from '../../utils/colorUtil';
 
 const TabView = React.createClass({
   propTypes: {
@@ -48,10 +49,10 @@ const TabView = React.createClass({
   renderNavigationView: function() {
     return (
       <View style={styles.drawer}>
-        <Image
-          style={styles.header}
-          source={require('./img/drawer-header.png')}>
-        </Image>
+        <View style={styles.header} >
+          <Image source={require('../profile/img/avatar.png')} style={styles.avatar} />
+          <Text style={styles.title} >Cooper</Text>
+        </View>
         <MenuItem
           title="Home"
           selected={this.props.tab === 'home'}
@@ -141,7 +142,11 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: 20,
-    justifyContent: 'flex-end',
+    paddingTop: 50,
+    height: 160,
+    backgroundColor: Colors.primaryColor,
+    justifyContent: 'center',
+    alignItems: "center"
   },
   name: {
     marginTop: 10,
@@ -164,6 +169,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
+  avatar: {
+    borderRadius: 40,
+    width: 80,
+    height: 80,
+    borderWidth: 1,
+    borderColor: "black"
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: "800",
+    color: 'white'
+  }
 });
 
 export default TabView;
