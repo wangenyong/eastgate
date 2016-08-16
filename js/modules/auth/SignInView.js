@@ -54,23 +54,23 @@ const SignInView = React.createClass({
 
         <View style={styles.inputs} /* 用户信息输入组件 */ >
           <View style={styles.inputContainer} /* 用户名 */ >
-            <Icon name="ios-person" size={24} color={Colors.primaryColor} />
+            <Icon name="ios-person" size={24} color="white" />
             <TextInput
               style={[styles.input, styles.greyFont]}
               placeholder="Username"
-              placeholderTextColor="darkgray"
+              placeholderTextColor="white"
               underlineColorAndroid='rgba(0,0,0,0)'
               onChangeText={(text) => this.setState({username: text})}
               value={this.state.username}
             />
           </View>
           <View style={styles.inputContainer} /* 密码 */ >
-            <Icon name="ios-lock" size={22} color={Colors.primaryColor} />
+            <Icon name="ios-lock" size={22} color="white" />
             <TextInput
               password={true}
               style={[styles.input, styles.greyFont]}
               placeholder="Password"
-              placeholderTextColor="darkgray"
+              placeholderTextColor="white"
               underlineColorAndroid='rgba(0,0,0,0)'
               onChangeText={(text) => this.setState({password: text})}
               value={this.state.password}
@@ -86,7 +86,7 @@ const SignInView = React.createClass({
         <View style={styles.signup} /* 注册按钮 */ >
           <Text style={styles.greyFont} >Do not have an account?  </Text>
           <TouchableOpacity >
-            <Text style={{color:Colors.primaryColor}}>Sign Up</Text>
+            <Text style={{color:Colors.accentColor}}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -117,7 +117,7 @@ const SignInView = React.createClass({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'transparent',
+    backgroundColor: Colors.primaryColor,
     padding: 26,
   },
   skip: {
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 10,
     borderWidth: 1,
-    borderBottomColor: '#CCC',
+    borderBottomColor: 'white' ,
     borderColor: 'transparent',
     alignItems: 'center',
   },
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   greyFont: {
-    color: 'darkgray'
+    color: "white"
   },
   whiteFont: {
     color: '#FFF'
