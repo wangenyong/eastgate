@@ -9,3 +9,17 @@ React Native Starter Kit
  
 ## 截图
 <img src="http://7xlphv.com1.z0.glb.clouddn.com/develop/eastgate/screenshot_android.png" width="240px" height="400px"/>  <img src="http://7xlphv.com1.z0.glb.clouddn.com/develop/eastgate/screenshot_ios.png" width="240px" height="400px"/>  
+
+## 使用
+### 下载
+```
+$ git clone https://github.com/wangenyong/eastgate.git YourAppName
+$ cd YourAppName
+$ ./support/rename.sh YourAppName
+$ npm install
+```
+### 运行
+```
+$ react-native run-ios
+$ react-native run-android
+```
