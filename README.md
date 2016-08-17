@@ -8,4 +8,4 @@ React Native Starter Kit
 此项目就是基于 [f8app](https://github.com/fbsamples/f8app) 和 [pepperoni-app-kit](https://github.com/futurice/pepperoni-app-kit) 进行精简和修改，创建一个满足常用项目的 starter kit。
  
 ## 截图
-<img src="http://7xlphv.com1.z0.glb.clouddn.com/develop/eastgate/screenshot_ios.png" width="240px" height="400px" />  <img src="http://7xlphv.com1.z0.glb.clouddn.com/develop/eastgate/screenshot_android.png" width="240px" height="400px"/>
+<img src="http://7xlphv.com1.z0.glb.clouddn.com/develop/eastgate/screenshot_android.png" width="240px" height="400px"/>  <img src="http://7xlphv.com1.z0.glb.clouddn.com/develop/eastgate/screenshot_ios.png" width="240px" height="400px"/>  
