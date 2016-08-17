@@ -23,3 +23,12 @@ $ npm install
 $ react-native run-ios
 $ react-native run-android
 ```
+## 依赖
+* [es6-symbol](https://github.com/medikoo/es6-symbol)
+* [immutable](https://github.com/facebook/immutable-js/)
+* [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+* [react-redux](https://github.com/reactjs/react-redux)
+* [redux-logger](https://github.com/evgenyrodionov/redux-logger)
+* [redux-loop](https://github.com/redux-loop/redux-loop)
+* [redux-promise](https://github.com/acdlite/redux-promise)
+* [redux-thunk](https://github.com/gaearon/redux-thunk)
